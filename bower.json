@@ -1,0 +1,20 @@
+{
+  "name": "express-orm",
+  "description": "",
+  "main": "entry/index.js",
+  "authors": [
+    "ASDAlexey <asdalexey@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+
+  }
+}

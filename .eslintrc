@@ -1,0 +1,36 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "strict": 0,
+    "react/jsx-no-bind": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "indent": 0,
+    "no-use-before-define": 1,
+    "max-len": [
+      2,
+      120,
+      4,
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+      }
+    ]
+  },
+  "globals": {
+    "_": true,
+    "classNames": true,
+    "React": true
+  }
+}

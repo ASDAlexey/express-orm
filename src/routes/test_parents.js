@@ -1,7 +1,7 @@
-import express from 'express';
+import { Router } from 'express';
 import models from '../models';
 
-const router = express.Router();
+const router = Router();
 
 router.post('/create', (req, res) => {
     models.TestParent.create({

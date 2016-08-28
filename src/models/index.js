@@ -6,7 +6,6 @@ const mysql = require('mysql');
 var Sequelize = require("sequelize");
 var env = process.env.NODE_ENV || "development";
 import config from '../config';
-console.log(config.get('database'));
 var sequelize = new Sequelize(config.get('database'), config.get('username'), config.get('password'), config.get());
 
 var db = {};

@@ -6,7 +6,7 @@ import engines from 'consolidate';
 // import favicon from 'serve-favicon';
 
 import routes from './routes/index';
-import users from './routes/users';
+import users from './routes/test_parents';
 
 const app = express();
 
@@ -23,13 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/test_parents', users);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error('Not Found');
-    err.status = 404;
     next(err);
+    err.status = 404;
 });
 
 // error handler

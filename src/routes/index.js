@@ -1,16 +1,17 @@
-var models  = require('../models');
-var express = require('express');
-var router  = express.Router();
+import express from 'express';
+import models from '../models';
 
-router.get('/', function(req, res) {
-  models.User.findAll({
-    include: [ models.Task ]
-  }).then(function(users) {
-    res.render('index', {
-      title: 'Sequelize: Express Example',
-      users: users
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    models.TestParent.findAll({
+        include: [models.TestChild],
+    }).then((testParents) => {
+        res.render('index', {
+            title: 'Sequelize: Express Example',
+            testParents,
+        });
     });
-  });
 });
 
-module.exports = router;
+export default router;

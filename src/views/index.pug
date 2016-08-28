@@ -1,4 +1,4 @@
-extends layout
+extends layout.pug
 
 block content
   h1= title
@@ -12,7 +12,7 @@ block content
   h2 Users
 
   ul
-  each user in users
+  each user in testParents
     li
       = user.username
       | &nbsp;

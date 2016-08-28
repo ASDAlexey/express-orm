@@ -22,16 +22,16 @@ router.get('/:test_parent_id/destroy', (req, res) => {
 });
 
 router.post('/:test_parent_id/test_childrens/create', (req, res) => {
-    models.Task.create({
+    models.TestChild.create({
         title: req.body.title,
-        UserId: req.params.test_parent_id,
+        TestParentId: req.params.test_parent_id,
     }).then(() => {
         res.redirect('/');
     });
 });
 
 router.get('/:test_parent_id/test_childrens/:test_childrens_id/destroy', (req, res) => {
-    models.Task.destroy({
+    models.TestChild.destroy({
         where: {
             id: req.params.test_childrens_id,
         },

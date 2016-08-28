@@ -1,17 +1,9 @@
 import express from 'express';
-import models from '../models';
+import Controller from '../controllers';
 
 const router = express.Router();
+const controller = new Controller();
 
-router.get('/', (req, res) => {
-    models.TestParent.findAll({
-        include: [models.TestChild],
-    }).then((testParents) => {
-        res.render('index', {
-            title: 'Sequelize: Express Example',
-            testParents,
-        });
-    });
-});
+router.get('/', controller.index);
 
 export default router;

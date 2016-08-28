@@ -3,15 +3,13 @@ import _ from 'lodash';
 class DatabaseHelpers {
     createDb(config, connection, error) {
         return new Promise((resolve, reject) => {
-            console.log(error);
-            // if (_.find(config.get('errors'), { name: error.name, message: error.message })) {
-            const query = `CREATE DATABASE ${config.get('database')} DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`;
-            console.log(query);
-            connection.query(query, err => {
-                if (err) reject(err);
-                resolve();
-            });
-            // } else reject(error);
+            if (_.find(config.get('errors'), { name: error.name, message: error.message })) {
+                const query = `CREATE DATABASE ${config.get('database')} DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`;
+                connection.query(query, err => {
+                    if (err) reject(err);
+                    resolve();
+                });
+            } else reject(error);
         });
     }
 

@@ -3,6 +3,10 @@
     {
       "name": "SequelizeConnectionError",
       "message": "ER_BAD_DB_ERROR: Unknown database 'express_orm_dev'"
+    },
+    {
+      "name": "SequelizeConnectionError",
+      "message": "ER_BAD_DB_ERROR: Unknown database 'express_orm_prod'"
     }
   ]
 }

@@ -10,7 +10,6 @@ import reotesTestParents from './routes/test_parents';
 
 const app = express();
 
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.engine('pug', engines.pug);
